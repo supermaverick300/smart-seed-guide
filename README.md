@@ -119,33 +119,3 @@ Optional: Voice assistance in Hindi for farmers
 
 Offline mode support (if possible)
 
-📌 Additional Notes
-
-Make the website visually appealing but extremely simple.
-
-Prioritize usability over complex UI.
-
-Add icons and step-by-step visuals for farmers.
-
-Output complete HTML/CSS/JS structure with all pages linked.
-
-This project was built with [Lovable](https://lovable.dev).
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/909e8e04-c3e3-4378-a46c-669685cdfffb).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
-```
