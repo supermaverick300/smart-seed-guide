@@ -1,0 +1,225 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+@layer base {
+  :root {
+    /* Earthy, Farm-Inspired Color Palette */
+    --background: 42 33% 96%;
+    --foreground: 25 30% 15%;
+
+    --card: 40 30% 98%;
+    --card-foreground: 25 30% 15%;
+
+    --popover: 40 30% 98%;
+    --popover-foreground: 25 30% 15%;
+
+    /* Forest Green - Primary */
+    --primary: 142 45% 32%;
+    --primary-foreground: 42 33% 98%;
+
+    /* Warm Terracotta - Secondary */
+    --secondary: 25 55% 45%;
+    --secondary-foreground: 42 33% 98%;
+
+    /* Sage Green - Muted */
+    --muted: 120 15% 85%;
+    --muted-foreground: 120 10% 35%;
+
+    /* Golden Wheat - Accent */
+    --accent: 42 85% 55%;
+    --accent-foreground: 25 30% 15%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 42 33% 98%;
+
+    --border: 30 20% 82%;
+    --input: 30 20% 82%;
+    --ring: 142 45% 32%;
+
+    --radius: 1rem;
+
+    /* Custom Farm Colors */
+    --soil-brown: 25 45% 30%;
+    --soil-light: 30 35% 75%;
+    --wheat-gold: 42 85% 55%;
+    --leaf-green: 142 45% 32%;
+    --sky-blue: 200 80% 60%;
+    --sun-yellow: 48 95% 60%;
+    --rain-blue: 210 70% 55%;
+    --warning-orange: 30 90% 55%;
+    --success-green: 142 60% 45%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(142 45% 32%), hsl(142 50% 25%));
+    --gradient-earth: linear-gradient(180deg, hsl(30 35% 75% / 0.3), hsl(25 45% 30% / 0.1));
+    --gradient-sky: linear-gradient(180deg, hsl(200 80% 85%), hsl(200 60% 95%));
+    --gradient-sunset: linear-gradient(135deg, hsl(42 85% 55%), hsl(25 55% 45%));
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsl(25 30% 15% / 0.08);
+    --shadow-medium: 0 8px 30px hsl(25 30% 15% / 0.12);
+    --shadow-leaf: 0 10px 40px hsl(142 45% 32% / 0.2);
+
+    --sidebar-background: 40 30% 98%;
+    --sidebar-foreground: 25 30% 15%;
+    --sidebar-primary: 142 45% 32%;
+    --sidebar-primary-foreground: 42 33% 98%;
+    --sidebar-accent: 120 15% 90%;
+    --sidebar-accent-foreground: 25 30% 15%;
+    --sidebar-border: 30 20% 82%;
+    --sidebar-ring: 142 45% 32%;
+  }
+
+  .dark {
+    --background: 25 30% 10%;
+    --foreground: 42 33% 96%;
+
+    --card: 25 25% 14%;
+    --card-foreground: 42 33% 96%;
+
+    --popover: 25 25% 14%;
+    --popover-foreground: 42 33% 96%;
+
+    --primary: 142 50% 45%;
+    --primary-foreground: 25 30% 10%;
+
+    --secondary: 25 45% 55%;
+    --secondary-foreground: 42 33% 98%;
+
+    --muted: 25 20% 20%;
+    --muted-foreground: 42 20% 65%;
+
+    --accent: 42 75% 50%;
+    --accent-foreground: 25 30% 10%;
+
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 42 33% 98%;
+
+    --border: 25 20% 22%;
+    --input: 25 20% 22%;
+    --ring: 142 50% 45%;
+
+    --sidebar-background: 25 25% 12%;
+    --sidebar-foreground: 42 33% 96%;
+    --sidebar-primary: 142 50% 45%;
+    --sidebar-primary-foreground: 25 30% 10%;
+    --sidebar-accent: 25 20% 18%;
+    --sidebar-accent-foreground: 42 33% 96%;
+    --sidebar-border: 25 20% 22%;
+    --sidebar-ring: 142 50% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-nunito antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins font-bold;
+  }
+}
+
+@layer components {
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .earth-gradient {
+    background: var(--gradient-earth);
+  }
+
+  .sky-gradient {
+    background: var(--gradient-sky);
+  }
+
+  .sunset-gradient {
+    background: var(--gradient-sunset);
+  }
+
+  .card-farm {
+    @apply bg-card rounded-2xl border border-border;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.3s ease;
+  }
+
+  .card-farm:hover {
+    box-shadow: var(--shadow-medium);
+    transform: translateY(-2px);
+  }
+
+  .btn-primary-farm {
+    @apply bg-primary text-primary-foreground px-8 py-4 rounded-xl font-semibold text-lg;
+    box-shadow: var(--shadow-leaf);
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary-farm:hover {
+    @apply bg-primary/90;
+    transform: translateY(-2px);
+    box-shadow: 0 14px 45px hsl(142 45% 32% / 0.3);
+  }
+
+  .btn-secondary-farm {
+    @apply bg-secondary text-secondary-foreground px-8 py-4 rounded-xl font-semibold text-lg;
+    transition: all 0.3s ease;
+  }
+
+  .btn-secondary-farm:hover {
+    @apply bg-secondary/90;
+    transform: translateY(-2px);
+  }
+
+  .feature-icon {
+    @apply w-16 h-16 rounded-2xl flex items-center justify-center text-primary-foreground;
+    background: var(--gradient-hero);
+    box-shadow: var(--shadow-leaf);
+  }
+
+  .weather-card {
+    @apply p-6 rounded-2xl text-center;
+    background: var(--gradient-sky);
+  }
+
+  .section-heading {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4;
+  }
+
+  .section-subheading {
+    @apply text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto;
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-float-delayed {
+    animation: float 6s ease-in-out infinite 2s;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 4s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
