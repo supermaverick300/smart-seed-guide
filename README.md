@@ -15,6 +15,7 @@ Agriculture extension workers
 Rural agricultural communities
 
 📄 Pages to Include
+
 1. Home Page
 
 Big, clean hero section with title “Smart Seed Selector for Farmers”
@@ -107,7 +108,7 @@ Use illustrations instead of complex images
 
 Mobile-first responsive design
 
-Support Hindi & local language toggle (if possible)
+Support Hindi \& local language toggle (if possible)
 
 ⚙️ Technical Features
 
