@@ -12,7 +12,7 @@ Small-scale farmers
 
 Agriculture extension workers
 
-Rural agricultural communities
+Rura agricultural communities
 
 📄 Pages to Include
 
