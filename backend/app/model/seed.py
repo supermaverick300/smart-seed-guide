@@ -1,4 +1,4 @@
-# app/models/seed.py
+from typing import List
 from sqlalchemy import Float, ForeignKey, Integer, String
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from app.database.connection import Base
@@ -20,3 +20,6 @@ class Seed(Base):
     disease_resistance: Mapped[str | None] = mapped_column(String, nullable=True)
 
     crop: Mapped["Crop"] = relationship(back_populates="seeds")
+    recommendations: Mapped[List["Recommendation"]] = relationship(
+        back_populates="seed", cascade="all, delete-orphan"
+    )
